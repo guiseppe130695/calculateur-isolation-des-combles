@@ -1,0 +1,22 @@
+/* Medal Styles */
+.medal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+.first-place {
+    border: 2px solid #FFD700;
+    background: linear-gradient(to right, white, #fff8e7);
+}
+
+.second-place {
+    border: 2px solid #C0C0C0;
+    background: linear-gradient(to right, white, #f8f8f8);
+}
+
+.third-place {
+    border: 2px solid #CD7F32;
+    background: linear-gradient(to right, white, #fff4ed);
+}

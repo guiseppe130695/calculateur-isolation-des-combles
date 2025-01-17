@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #f5f6fa;
+    --success-color: #2ecc71;
+    --border-color: #e1e4e8;
+}
+
+/* ... (keep existing base styles until .form-group) ... */
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.card-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-option input[type="checkbox"],
+.card-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.card-content {
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.card-option input:checked + .card-content {
+    border-color: var(--primary-color);
+    background-color: #f0f7ff;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-label {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+/* ... (keep rest of existing styles) ... */

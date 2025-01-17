@@ -1,0 +1,36 @@
+/* Import all CSS modules */
+@import 'variables.css';
+@import 'typography.css';
+@import 'base.css';
+@import 'forms.css';
+@import 'cards.css';
+@import 'components/results-grid.css';
+@import 'components/medals.css';
+@import 'components/buttons.css';
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .option-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .result-card {
+        padding: 1.5rem;
+    }
+
+    .result-logo {
+        height: 30px;
+    }
+
+    .medal {
+        font-size: 1.5rem;
+    }
+}

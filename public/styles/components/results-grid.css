@@ -1,0 +1,35 @@
+/* Results Grid Layout */
+.results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.result-card {
+    position: relative;
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.result-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result-logo {
+    height: 40px;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}

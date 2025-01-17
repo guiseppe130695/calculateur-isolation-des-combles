@@ -1,0 +1,87 @@
+.results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.result-card {
+    position: relative;
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.medal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+.result-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result-logo {
+    height: 40px;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}
+
+.result-card h2 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.result-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.first-place {
+    border: 2px solid #FFD700;
+    background: linear-gradient(to right, white, #fff8e7);
+}
+
+.second-place {
+    border: 2px solid #C0C0C0;
+    background: linear-gradient(to right, white, #f8f8f8);
+}
+
+.third-place {
+    border: 2px solid #CD7F32;
+    background: linear-gradient(to right, white, #fff4ed);
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+    .result-card {
+        padding: 1.5rem;
+    }
+
+    .result-logo {
+        height: 30px;
+    }
+
+    .medal {
+        font-size: 1.5rem;
+    }
+}

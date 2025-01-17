@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 Calculateur Isolation des Combles</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Calculez votre projet d'isolation des combles</h1>
+        <form onsubmit="handleFormSubmit(event)">
+            <% formData.sections.forEach(section => { %>
+                <div class="form-group">
+                    <h2><%= section.title %></h2>
+                    <div class="option-grid">
+                        <% section.options.forEach(option => { %>
+                            <label class="card-option">
+                                <input 
+                                    type="<%= section.type %>" 
+                                    name="<%= section.id %><%= section.type === 'checkbox' ? '[]' : '' %>" 
+                                    value="<%= option.value %>"
+                                    class="<%= section.id %>-<%= section.type %>">
+                                <div class="card-content">
+                                    <div class="card-icon"><%= option.icon %></div>
+                                    <div class="card-label"><%= option.label %></div>
+                                </div>
+                            </label>
+                        <% }); %>
+                    </div>
+                </div>
+            <% }); %>
+
+            <button type="submit">Calculer mon projet d'isolation 🚀</button>
+        </form>
+    </div>
+    <script src="/js/formHandler.js"></script>
+</body>
+</html>

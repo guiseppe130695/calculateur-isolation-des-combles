@@ -1,0 +1,58 @@
+/* Card Grid Layout */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-option input[type="checkbox"],
+.card-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.card-content {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-option input:checked + .card-content {
+  border-color: var(--primary-color);
+  background-color: #f0f7ff;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-label {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Hover Effects */
+.card-content:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
