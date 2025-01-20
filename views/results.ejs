@@ -36,7 +36,7 @@
                             <p class="cta-text">Pour obtenir un prix exact adapté à votre situation, demandez un devis gratuit à nos experts :</p>
                         </div>
                         
-                        <a href="#pro-contact" class="contact-pro-button">Obtenir mon devis personnalisé gratuitement →</a>
+                        <a href="#pro-contact" class="contact-pro-button">Obtenir mon devis personnalisé →</a>
                         
                         <% if (formData.aides === 'oui') { %>
                         <p class="aide-note">💡 Cette estimation inclut déjà une réduction moyenne de 30% d'aides. Nos experts vous accompagnent pour maximiser vos aides !</p>
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <a href="/" class="button back-button">Refaire une estimation</a>
+        <a href="/" class="button back-button">← Nouvelle estimation</a>
     </div>
 
     <style>
@@ -165,8 +165,8 @@
         .contact-pro-button {
             display: inline-block;
             width: 100%;
-            background-color: #d3ff52;
-            color: #000;
+            background: none;
+            color: var(--secondary-color);
             padding: 0.75rem 1rem;
             border-radius: 4px;
             text-decoration: none;
@@ -174,11 +174,12 @@
             text-align: center;
             margin: 0.5rem 0;
             transition: all 0.2s ease;
+            border: 1px solid var(--secondary-color);
         }
 
         .contact-pro-button:hover {
-            background-color: #c4ef43;
-            transform: translateY(-2px);
+            background: var(--secondary-color);
+            color: white;
         }
 
         .pro-contact {
@@ -250,6 +251,23 @@
             margin-bottom: 0.25rem;
             color: #444;
             font-size: 0.9rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: none;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 2rem;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            color: white;
         }
 
         @media (max-width: 768px) {

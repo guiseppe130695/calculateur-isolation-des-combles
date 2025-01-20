@@ -1,11 +1,11 @@
 {
   "steps": [
     {
-      "title": "🏠 Votre habitation",
+      "title": "🏠 Découvrons votre projet d'isolation",
       "sections": [
         {
           "id": "habitation",
-          "title": "Type d'habitation",
+          "title": "Quel type de logement souhaitez-vous isoler ?",
           "type": "radio",
           "options": [
             {
@@ -27,7 +27,7 @@
         },
         {
           "id": "isolation_existante",
-          "title": "État de l'isolation",
+          "title": "Comment se porte votre isolation actuelle ?",
           "type": "radio",
           "options": [
             {
@@ -50,11 +50,11 @@
       ]
     },
     {
-      "title": "📏 Surface et matériaux",
+      "title": "📏 Personnalisons votre solution",
       "sections": [
         {
           "id": "surface",
-          "title": "Surface à isoler",
+          "title": "Quelle surface souhaitez-vous transformer ?",
           "type": "radio",
           "options": [
             {
@@ -76,7 +76,7 @@
         },
         {
           "id": "materiau",
-          "title": "Matériau souhaité",
+          "title": "Choisissez le matériau idéal pour votre confort",
           "type": "radio",
           "options": [
             {
@@ -104,11 +104,11 @@
       ]
     },
     {
-      "title": "💰 Budget et aides",
+      "title": "💰 Optimisons votre investissement",
       "sections": [
         {
           "id": "budget",
-          "title": "Budget approximatif",
+          "title": "Quel budget envisagez-vous pour votre confort ?",
           "type": "radio",
           "options": [
             {
@@ -130,7 +130,7 @@
         },
         {
           "id": "aides",
-          "title": "Intérêt aides financières",
+          "title": "Envie d'économiser jusqu'à 30% sur vos travaux ?",
           "type": "radio",
           "options": [
             {
@@ -147,18 +147,18 @@
         },
         {
           "id": "preoccupations",
-          "title": "Préoccupations",
+          "title": "Qu'est-ce qui compte le plus pour vous ?",
           "type": "checkbox",
           "options": [
             {
               "value": "cout",
               "icon": "💸",
-              "label": "Coût"
+              "label": "Économies"
             },
             {
               "value": "perturbation",
               "icon": "🏗️",
-              "label": "Travaux"
+              "label": "Rapidité"
             },
             {
               "value": "ecologie",
