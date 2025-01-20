@@ -25,51 +25,56 @@
                     </div>
 
                     <div class="estimate-notes">
-                        <p><strong>Note importante :</strong> Cette estimation est donnée à titre indicatif et peut varier en fonction de :</p>
-                        <ul>
-                            <li>La configuration exacte de vos combles</li>
-                            <li>L'accessibilité du chantier</li>
-                            <li>Les spécificités techniques non prises en compte dans ce calculateur</li>
-                            <li>Les variations de prix des matériaux</li>
-                        </ul>
+                        <div class="important-note">
+                            <p><strong>Note importante :</strong></p>
+                            <ul>
+                                <li>La configuration exacte de vos combles peut influencer le coût final</li>
+                                <li>L'accessibilité du chantier peut nécessiter des ajustements</li>
+                                <li>Des spécificités techniques peuvent être identifiées lors de la visite</li>
+                                <li>Les prix des matériaux peuvent varier selon la période</li>
+                            </ul>
+                            <p class="cta-text">Pour obtenir un prix exact adapté à votre situation, demandez un devis gratuit à nos experts :</p>
+                        </div>
+                        
+                        <a href="#pro-contact" class="contact-pro-button">Obtenir mon devis personnalisé gratuitement →</a>
                         
                         <% if (formData.aides === 'oui') { %>
-                        <p class="aide-note">💡 Cette estimation prend en compte une réduction moyenne de 30% grâce aux aides financières. Les aides réelles peuvent varier selon votre situation.</p>
+                        <p class="aide-note">💡 Cette estimation inclut déjà une réduction moyenne de 30% d'aides. Nos experts vous accompagnent pour maximiser vos aides !</p>
                         <% } %>
                     </div>
                 </div>
             </div>
 
             <!-- Section Contact Pro -->
-            <div class="result-card pro-contact">
+            <div id="pro-contact" class="result-card pro-contact">
                 <div class="result-content">
-                    <h2>🤝 Obtenez un devis personnalisé</h2>
-                    <p class="pro-intro">Pour obtenir un devis précis et personnalisé, nos experts sont à votre disposition :</p>
+                    <h2>🤝 Obtenez votre devis gratuit</h2>
+                    <p class="pro-intro">Nos experts certifiés RGE sont à votre disposition pour étudier votre projet en détail :</p>
                     
                     <div class="contact-options">
                         <a href="#" class="contact-option">
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
-                                <h3>Être rappelé par un expert</h3>
-                                <p>Un professionnel vous contactera sous 24h</p>
+                                <h3>Être rappelé gratuitement</h3>
+                                <p>Un expert vous contacte sous 24h</p>
                             </div>
                         </a>
 
                         <a href="https://www.exemple-isolation.fr/devis" target="_blank" class="contact-option">
                             <div class="contact-icon">📝</div>
                             <div class="contact-details">
-                                <h3>Devis en ligne</h3>
-                                <p>Recevez un devis détaillé sous 48h</p>
+                                <h3>Devis en ligne gratuit</h3>
+                                <p>Recevez votre devis sous 48h</p>
                             </div>
                         </a>
 
                         <div class="pro-benefits">
-                            <h3>Les avantages de nos pros certifiés :</h3>
+                            <h3>Pourquoi faire confiance à nos experts ?</h3>
                             <ul>
-                                <li>✓ Visite technique gratuite</li>
-                                <li>✓ Devis détaillé et personnalisé</li>
-                                <li>✓ Accompagnement pour les aides financières</li>
-                                <li>✓ Garantie décennale</li>
+                                <li>✓ Visite technique gratuite et sans engagement</li>
+                                <li>✓ Devis détaillé et transparent</li>
+                                <li>✓ Accompagnement personnalisé pour vos aides</li>
+                                <li>✓ Garantie décennale et assurance incluses</li>
                             </ul>
                         </div>
                     </div>
@@ -84,114 +89,156 @@
         .price-ranges {
             display: flex;
             justify-content: space-between;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 1rem;
+            margin: 1rem 0;
         }
 
         .price-range {
             flex: 1;
             text-align: center;
-            padding: 1.5rem;
-            background: #f8f9fa;
+            padding: 1rem;
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
         }
 
         .price-range.highlighted {
             background: #d3ff52;
-            transform: scale(1.05);
         }
 
         .price-range h3 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
             color: var(--secondary-color);
         }
 
         .price {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--secondary-color);
         }
 
         .estimate-notes {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: var(--radius-md);
+            margin-top: 1rem;
+            text-align: left;
         }
 
-        .estimate-notes ul {
+        .important-note {
+            margin-bottom: 1rem;
+        }
+
+        .important-note ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+
+        .important-note li {
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .important-note li:before {
+            content: "•";
+            position: absolute;
+            left: 0.4rem;
+            color: #d3ff52;
+        }
+
+        .cta-text {
+            font-size: 0.9rem;
             margin: 1rem 0;
-            padding-left: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 500;
         }
 
         .aide-note {
             margin-top: 1rem;
-            padding: 1rem;
+            padding: 0.5rem;
             background: #e8f4ff;
             border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            text-align: center;
         }
 
-        /* Styles pour la section contact pro */
+        .contact-pro-button {
+            display: inline-block;
+            width: 100%;
+            background-color: #d3ff52;
+            color: #000;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            margin: 0.5rem 0;
+            transition: all 0.2s ease;
+        }
+
+        .contact-pro-button:hover {
+            background-color: #c4ef43;
+            transform: translateY(-2px);
+        }
+
         .pro-contact {
-            margin-top: 2rem;
-            background: #fff;
+            margin-top: 1rem;
         }
 
         .pro-intro {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
             color: var(--secondary-color);
         }
 
         .contact-options {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .contact-option {
             display: flex;
             align-items: center;
-            padding: 1.5rem;
-            background: #f8f9fa;
+            padding: 1rem;
+            background: #fafafa;
             border-radius: var(--radius-md);
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .contact-option:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
 
         .contact-icon {
-            font-size: 2rem;
-            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            margin-right: 1rem;
         }
 
         .contact-details h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
             color: var(--secondary-color);
         }
 
         .contact-details p {
             color: #666;
+            font-size: 0.9rem;
         }
 
         .pro-benefits {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: #f0f7ff;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #fafafa;
             border-radius: var(--radius-md);
         }
 
         .pro-benefits h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--secondary-color);
+            font-size: 0.9rem;
         }
 
         .pro-benefits ul {
@@ -200,27 +247,25 @@
         }
 
         .pro-benefits li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             color: #444;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
             .price-ranges {
                 flex-direction: column;
-                gap: 1rem;
-            }
-
-            .price-range.highlighted {
-                transform: none;
+                gap: 0.5rem;
             }
 
             .contact-option {
                 flex-direction: column;
                 text-align: center;
+                padding: 0.75rem;
             }
 
             .contact-icon {
-                margin: 0 0 1rem 0;
+                margin: 0 0 0.5rem 0;
             }
         }
     </style>

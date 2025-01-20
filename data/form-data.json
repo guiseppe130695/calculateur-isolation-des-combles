@@ -1,161 +1,171 @@
 {
-  "sections": [
+  "steps": [
     {
-      "id": "habitation",
-      "title": "🏠 Quel est le type de votre habitation ?",
-      "type": "radio",
-      "options": [
+      "title": "🏠 Votre habitation",
+      "sections": [
         {
-          "value": "maison",
-          "icon": "🏡",
-          "label": "Maison individuelle"
+          "id": "habitation",
+          "title": "Type d'habitation",
+          "type": "radio",
+          "options": [
+            {
+              "value": "maison",
+              "icon": "🏡",
+              "label": "Maison"
+            },
+            {
+              "value": "appartement",
+              "icon": "🏢",
+              "label": "Appartement"
+            },
+            {
+              "value": "autre",
+              "icon": "🏗️",
+              "label": "Autre"
+            }
+          ]
         },
         {
-          "value": "appartement",
-          "icon": "🏢",
-          "label": "Appartement"
-        },
-        {
-          "value": "autre",
-          "icon": "🏗️",
-          "label": "Autre"
+          "id": "isolation_existante",
+          "title": "État de l'isolation",
+          "type": "radio",
+          "options": [
+            {
+              "value": "insuffisante",
+              "icon": "⚠️",
+              "label": "Insuffisante"
+            },
+            {
+              "value": "bon_etat",
+              "icon": "✅",
+              "label": "Bon état"
+            },
+            {
+              "value": "aucune",
+              "icon": "❌",
+              "label": "Aucune"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "isolation_existante",
-      "title": "🔍 Avez-vous déjà une isolation dans vos combles ?",
-      "type": "radio",
-      "options": [
+      "title": "📏 Surface et matériaux",
+      "sections": [
         {
-          "value": "insuffisante",
-          "icon": "⚠️",
-          "label": "Oui, mais elle est insuffisante"
+          "id": "surface",
+          "title": "Surface à isoler",
+          "type": "radio",
+          "options": [
+            {
+              "value": "moins_50",
+              "icon": "🟦",
+              "label": "< 50 m²"
+            },
+            {
+              "value": "50_100",
+              "icon": "🟨",
+              "label": "50-100 m²"
+            },
+            {
+              "value": "plus_100",
+              "icon": "🟧",
+              "label": "> 100 m²"
+            }
+          ]
         },
         {
-          "value": "bon_etat",
-          "icon": "✅",
-          "label": "Oui, elle est en bon état"
-        },
-        {
-          "value": "aucune",
-          "icon": "❌",
-          "label": "Non, il n'y a pas d'isolation"
+          "id": "materiau",
+          "title": "Matériau souhaité",
+          "type": "radio",
+          "options": [
+            {
+              "value": "laine_verre",
+              "icon": "🌫️",
+              "label": "Laine de verre"
+            },
+            {
+              "value": "laine_roche",
+              "icon": "🗿",
+              "label": "Laine de roche"
+            },
+            {
+              "value": "polystyrene",
+              "icon": "⬜",
+              "label": "Polystyrène"
+            },
+            {
+              "value": "autre",
+              "icon": "❓",
+              "label": "Autre"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "surface",
-      "title": "📏 Quelle est la surface approximative de vos combles à isoler ?",
-      "type": "radio",
-      "options": [
+      "title": "💰 Budget et aides",
+      "sections": [
         {
-          "value": "moins_50",
-          "icon": "🟦",
-          "label": "Moins de 50 m²"
+          "id": "budget",
+          "title": "Budget approximatif",
+          "type": "radio",
+          "options": [
+            {
+              "value": "moins_2000",
+              "icon": "💰",
+              "label": "< 2000€"
+            },
+            {
+              "value": "2000_5000",
+              "icon": "💰💰",
+              "label": "2000-5000€"
+            },
+            {
+              "value": "plus_5000",
+              "icon": "💰💰💰",
+              "label": "> 5000€"
+            }
+          ]
         },
         {
-          "value": "50_100",
-          "icon": "🟨",
-          "label": "Entre 50 et 100 m²"
+          "id": "aides",
+          "title": "Intérêt aides financières",
+          "type": "radio",
+          "options": [
+            {
+              "value": "oui",
+              "icon": "✅",
+              "label": "Oui"
+            },
+            {
+              "value": "non",
+              "icon": "❌",
+              "label": "Non"
+            }
+          ]
         },
         {
-          "value": "plus_100",
-          "icon": "🟧",
-          "label": "Plus de 100 m²"
-        }
-      ]
-    },
-    {
-      "id": "materiau",
-      "title": "🧱 Quel type de matériau souhaitez-vous pour l'isolation ?",
-      "type": "radio",
-      "options": [
-        {
-          "value": "laine_verre",
-          "icon": "🌫️",
-          "label": "Laine de verre"
-        },
-        {
-          "value": "laine_roche",
-          "icon": "🗿",
-          "label": "Laine de roche"
-        },
-        {
-          "value": "polystyrene",
-          "icon": "⬜",
-          "label": "Polystyrène expansé"
-        },
-        {
-          "value": "autre",
-          "icon": "❓",
-          "label": "Autre"
-        }
-      ]
-    },
-    {
-      "id": "budget",
-      "title": "💰 Quel est votre budget approximatif pour ce projet ?",
-      "type": "radio",
-      "options": [
-        {
-          "value": "moins_2000",
-          "icon": "💰",
-          "label": "Moins de 2 000 €"
-        },
-        {
-          "value": "2000_5000",
-          "icon": "💰💰",
-          "label": "Entre 2 000 € et 5 000 €"
-        },
-        {
-          "value": "plus_5000",
-          "icon": "💰💰💰",
-          "label": "Plus de 5 000 €"
-        }
-      ]
-    },
-    {
-      "id": "preoccupations",
-      "title": "⚠️ Avez-vous des préoccupations spécifiques concernant l'isolation ?",
-      "type": "checkbox",
-      "options": [
-        {
-          "value": "cout",
-          "icon": "💸",
-          "label": "Coût élevé"
-        },
-        {
-          "value": "perturbation",
-          "icon": "🏗️",
-          "label": "Perturbation du quotidien"
-        },
-        {
-          "value": "ecologie",
-          "icon": "🌱",
-          "label": "Durabilité et impact écologique"
-        },
-        {
-          "value": "autre",
-          "icon": "❓",
-          "label": "Autre"
-        }
-      ]
-    },
-    {
-      "id": "aides",
-      "title": "💶 Seriez-vous intéressé(e) par une aide financière ?",
-      "type": "radio",
-      "options": [
-        {
-          "value": "oui",
-          "icon": "✅",
-          "label": "Oui, je souhaite en savoir plus sur les aides disponibles"
-        },
-        {
-          "value": "non",
-          "icon": "❌",
-          "label": "Non, je préfère autofinancer le projet"
+          "id": "preoccupations",
+          "title": "Préoccupations",
+          "type": "checkbox",
+          "options": [
+            {
+              "value": "cout",
+              "icon": "💸",
+              "label": "Coût"
+            },
+            {
+              "value": "perturbation",
+              "icon": "🏗️",
+              "label": "Travaux"
+            },
+            {
+              "value": "ecologie",
+              "icon": "🌱",
+              "label": "Écologie"
+            }
+          ]
         }
       ]
     }

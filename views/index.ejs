@@ -10,29 +10,46 @@
 <body>
     <div class="container">
         <h1>🏠 Calculez votre projet d'isolation des combles</h1>
+        
+        <div class="progress-bar">
+            <div class="progress-bar-inner"></div>
+        </div>
+        <div class="progress-text"></div>
+
         <form onsubmit="handleFormSubmit(event)">
-            <% formData.sections.forEach(section => { %>
-                <div class="form-group">
-                    <h2><%= section.title %></h2>
-                    <div class="option-grid">
-                        <% section.options.forEach(option => { %>
-                            <label class="card-option">
-                                <input 
-                                    type="<%= section.type %>" 
-                                    name="<%= section.id %><%= section.type === 'checkbox' ? '[]' : '' %>" 
-                                    value="<%= option.value %>"
-                                    class="<%= section.id %>-<%= section.type %>">
-                                <div class="card-content">
-                                    <div class="card-icon"><%= option.icon %></div>
-                                    <div class="card-label"><%= option.label %></div>
+            <% formData.steps.forEach((step, stepIndex) => { %>
+                <div class="step">
+                    <h2 class="step-title"><%= step.title %></h2>
+                    <div class="step-content">
+                        <% step.sections.forEach(section => { %>
+                            <div class="form-group">
+                                <h3 class="section-title"><%= section.title %></h3>
+                                <div class="option-grid">
+                                    <% section.options.forEach(option => { %>
+                                        <label class="card-option">
+                                            <input 
+                                                type="<%= section.type %>" 
+                                                name="<%= section.id %><%= section.type === 'checkbox' ? '[]' : '' %>" 
+                                                value="<%= option.value %>"
+                                                class="<%= section.id %>-<%= section.type %>">
+                                            <div class="card-content">
+                                                <div class="card-icon"><%= option.icon %></div>
+                                                <div class="card-label"><%= option.label %></div>
+                                            </div>
+                                        </label>
+                                    <% }); %>
                                 </div>
-                            </label>
+                            </div>
                         <% }); %>
                     </div>
                 </div>
             <% }); %>
 
-            <button type="submit">Calculer mon projet d'isolation 🚀</button>
+            <div class="navigation-buttons">
+                <button type="button" class="prev-button" onclick="prevStep()">← Précédent</button>
+                <button type="button" class="next-button" onclick="nextStep()">Suivant →</button>
+                <button type="submit" class="submit-button">Calculer mon projet 🚀</button>
+            </div>
         </form>
     </div>
     <script src="/js/formHandler.js"></script>
